@@ -42,21 +42,25 @@
    - software (and associated documentation for) components of "framework"
      - platform 
        - Linux
-	 - Arch Install Guide (my distro of choice, distro du jour)
+	 
+	 Arch Install Guide (my distro of choice, distro du jour)
        - emacs
-	 - org-mode with org-babel, for reproducible research
-	   
+	 
+	 org-mode with org-babel, for reproducible research
      - data management
        - postgresql
-	 - and postgis (for working geo/spatial data)
-	 - other rdbms like mssql, oracle even mysql
+	 
+	 and postgis (for working geo/spatial data)
+	 
+	 other rdbms like mssql, oracle even mysql
        - hadoop
        - riak
        - couchdb/couchbase
 	   
      - analytics
        - R statistical programming language
-	 - rstudio (web-based IDE)
+	 
+	 rstudio (web-based IDE)
        - [[http://www.cs.waikato.ac.nz/ml/weka/][WEKA 3 - Data Mining Software in Java]]
        - [[http://mahout.apache.org/][Mahout - Machine Learning for Hadoop]]
        - RapidMiner
