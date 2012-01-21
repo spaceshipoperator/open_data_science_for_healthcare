@@ -1,0 +1,103 @@
+* Open Data Science for Healthcare
+** declaration
+
+   We will create and deliver a framework, documented workflow and curriculum to support the pratical application of data science as a discipline within the healthcare industry
+
+** foundation
+  
+   There is increasing and widespread adoption of Electronic Medical Record (EMR) systems as well as a vast number of more specialized Information Systems (IS) in use within healthcare organizations.  
+
+   Additionally, there is a growing number and volume of data freely and openly available that can be correlated with private and proprietary sources to enrich the value of "data products" and relevant information to drive decision making for leaders and consumers.
+
+   The rise in recent years of "big data" has included a wide variety of tools and techniques for working with large amounts of data, many of these software components are freely available, open source and actively developed by contributors and supported by private parties (including large enterprises, start-ups and even not-for-profit organizations)
+   
+   The discipline of data science has begun to emerge and there is a strong likelihood that this will be a major factor for the success of any organization that depends on information services.
+
+
+** considerations
+
+   - recent articles clarify the need for and state of data science and healthcare
+     - [[http://radar.oreilly.com/2010/06/what-is-data-science.html][O'reilly - What is Data Science]]
+     - [[http://www.mckinsey.com/Insights/MGI/Research/Technology_and_Innovation/Big_data_The_next_frontier_for_innovation][McKinsey - Big data: The next frontier for innovation, competition, and productivity]]
+     - [[http://www.nytimes.com/2009/08/06/technology/06stats.html][NY Times - For Today’s Graduate, Just One Word: Statistics]]
+     - [[http://www.emc.com/about/news/press/2011/20111205-02.htm][EMC - New Global Study: Only One-Third of Companies Making Effective Use of Data]]
+     - [[http://www.emc.com/collateral/about/news/emc-data-science-study-wp.pdf][(PDF) EMC - Data Science Revealed: A Data-Driven Glimpse into the Burgeoning New Field]]
+     - [[http://www.forbes.com/sites/colinhill/2011/11/17/can-big-data-fix-healthcare/][Forbes - Can Big Data Fix Healthcare?]]
+
+   - initially, all open data gathered will be loaded into a PostgreSQL database
+     
+   - must identify opportunities for exploring health data with some of the following tools/techniques:
+     - hadoop/mahout
+     - riak
+
+   - while this framework will be built on a Linux Operating System Distribution, all software should be platform independent and able to run on other Operating Systems (such as Macintosh or Windows)
+      
+   - while all components included as part of this framework will be free and open source, there must exist a means to interoperate, integrate with closed source and/or proprietary systems and data
+     - for example: curehunter
+     
+** resources
+   
+   - [[https://github.com/spaceshipoperator/a_portable_guide][a portable guide]]
+     
+   - software (and associated documentation for) components of "framework"
+     - platform 
+       - Linux
+	 - Arch Install Guide (my distro of choice, distro du jour)
+       - emacs
+	 - org-mode with org-babel, for reproducible research
+	   
+     - data management
+       - postgresql
+	 - and postgis (for working geo/spatial data)
+	 - other rdbms like mssql, oracle even mysql
+       - hadoop
+       - riak
+       - couchdb/couchbase
+	   
+     - analytics
+       - R statistical programming language
+	 - rstudio (web-based IDE)
+       - [[http://www.cs.waikato.ac.nz/ml/weka/][WEKA 3 - Data Mining Software in Java]]
+       - [[http://mahout.apache.org/][Mahout - Machine Learning for Hadoop]]
+       - RapidMiner
+       - [[http://pybrain.org/][PyBrain - Python Machine Learning Library]]
+       - [[http://www.nltk.org/][Natural Language Toolkit (Python)]]
+	 
+     - application
+       - Node.js (server-side javascript for realtime web)
+	 
+     - presentation (web, rich, interactive GUI)
+       - jquery
+       - d3js
+       - polymaps
+     
+   - books and documentation
+     - [[http://greenteapress.com/thinkstats/html/index.html][thinkstats]]
+
+   - open healthcare data
+     - [[http://www.data.gov/communities/health][Data.gov - Health]]
+     - [[http://opensource.com/health][Open Source - Health]]
+     - [[http://www.infochimps.com/][infochimps]]
+     - [[http://www.factual.com/topic/health][Factual - Health]]
+     - [[http://www.ncbi.nlm.nih.gov/pubmed/][PubMed - National Library of Medicine & National Institute of Health]]
+       
+** implementation
+   - identify, (rate?,) gather and load (into PostgreSQL) all available open healthcare data
+   
+   - identify, install (and document settings and configuration) all software components on a single server
+     - retrieve, and load U.S. Census data (to allow for geographic analysis of healthcare data)
+       - *hint hint, tokenmathguy*
+     
+   - create comprehensive demonstration of how each software component can particpate in an end-to-end solution
+      
+   - create data science training materials and reusable components
+     - sql and statistics training for data miners
+       - [[https://github.com/spaceshipoperator/thinkstats_sql_r][fork thinkstats and translate excercises from python to sql/R]]
+	 
+       - draft SQL best practices presentation and deliver (video?)
+
+     - javascript for developing interactive, rich graphical interfaces
+       - revise, re-architect [[https://github.com/spaceshipoperator/tsv][tsv]]
+       
+     - machine learning principles and procedures
+     
